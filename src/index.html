@@ -12,17 +12,202 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="card text-center m-5" style="border: 1px solid lightgrey;">
+      <div class="card-header">
+        <h1 style="text-align:start; padding-left: 10px;">
+          <strong>Payment for example</strong>
+        </h1>
+      </div>
+      <div class="card-body">
+        <!-- FORM -->
+        <form class="row g-3 m-2">
+          <div
+            class="alert alert-danger text-start"
+            role="alert"
+            style="display:none;"
+            id="alerta"
+          >
+            <strong>Some fields are missing</strong>
+          </div>
+          <div class="col-md-5">
+            <label for="card1" class="form-label d-flex justify-content-start"
+              >Card #</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              placeholder="XXXXXXXXXXXXXX"
+              id="tarjeta"
+            />
+          </div>
+          <div class="col-md-3">
+            <label
+              for="inputPassword4"
+              class="form-label d-flex justify-content-start"
+              >CvC #</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="cvc"
+              placeholder="0000"
+            />
+          </div>
+          <div class="col-md-4">
+            <label
+              for="inputAddress"
+              class="form-label d-flex justify-content-start"
+              >Amount</label
+            >
+            <div class="input-group mb-3">
+              <span class="input-group-text">$</span>
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Amount (to the nearest dollar)"
+                placeholder=" Amount"
+                id="amount"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label
+              for="inputAddress2"
+              class="form-labe d-flex justify-content-start"
+              >First Name</label
+            >
+            <input type="text" class="form-control mt-2" id="nombre" />
+          </div>
+          <div class="col-md-6">
+            <label
+              for="inputCity"
+              class="form-label d-flex justify-content-start"
+              >Last Name</label
+            >
+            <input type="text" class="form-control" id="apellido" />
+          </div>
+          <div class="col-md-6">
+            <label
+              for="inputCity"
+              class="form-label d-flex justify-content-start"
+              >City</label
+            >
+            <input type="text" class="form-control" id="city" />
+          </div>
+          <div class="col-md-3">
+            <label
+              for="inputState"
+              class="form-label d-flex justify-content-start"
+              >State</label
+            >
+            <select id="state" class="form-select">
+              <option>Pick a State</option>
+              <option>Florida</option>
+              <option>California</option>
+              <option>Texas</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label
+              for="inputZip"
+              class="form-label d-flex justify-content-start"
+              >Postal Code</label
+            >
+            <input type="number" class="form-control" id="pcode" />
+          </div>
+          <!-- Checkboxes -->
+          <div class="col-md-3" styles="">
+            <p class="d-flex justify-content-start">We accept:</p>
+            <div
+              class="d-flex justify-content-start"
+              style="background-color: gray; padding: 5px; padding-left: 35px; border-radius: 4px;"
+            >
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="chb1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineRadio1">
+                  <i class="fa fa-credit-card"></i>
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="chb2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2">
+                  <i class="far fa-credit-card"></i>
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="chb3"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2">
+                  <i class="fa fa-credit-card"></i
+                ></label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="chb4"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2">
+                  <i class="fa fa-credit-card"></i
+                ></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkboxes close -->
+
+          <div class="col-md-3"></div>
+
+          <div class="col-md-6 mb-3">
+            <label
+              for="exampleFormControlTextarea1"
+              class="form-label d-flex justify-content-start"
+              >Message</label
+            >
+            <textarea class="form-control" id="message" rows="3"></textarea>
+            <p
+              class="d-flex justify-content-start text-secondary"
+              style="font-size: 14px;"
+            >
+              Add any notes here.
+            </p>
+          </div>
+          <!-- Botones del footer -->
+          <div class="card-footer text-end">
+            <div class="col-12">
+              <button type="button" class="btn bg-secondary text-light">
+                <strong>Cancel</strong>
+              </button>
+              <button type="submit" class="btn btn-primary text-light">
+                <strong>Send</strong>
+              </button>
+            </div>
+          </div>
+        </form>
+        <!-- Form close -->
       </div>
     </div>
   </body>
